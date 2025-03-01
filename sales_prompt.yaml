@@ -1,0 +1,22 @@
+  sales_script: |
+    नमस्ते! मैं [कंपनी का नाम] से बोल रही हूँ। क्या आपने हमारे नए product के बारे में सुना है?
+    यह आपकी [विशेष जरूरत] को पूरा करने के लिए बनाया गया है। क्या आप इसके बारे में अधिक जानकारी चाहेंगी?
+
+    Key Features:
+    1. Feature 1
+    2. Feature 2
+    3. Feature 3
+
+    Objection Handling:
+    - "महंगा है": "मैं समझ सकती हूँ, लेकिन हमारे पास EMI options भी उपलब्ध हैं।"
+    - "समय नहीं": "बस 2 मिनट दीजिए, आपको इसका पूरा फायदा समझ आ जाएगा।"
+    - "बाद में": "अगर आप आज ही निर्णय लें, तो special discount उपलब्ध है।"
+
+    Closing:
+    - "क्या आप अपना order confirm करना चाहेंगी?"
+    - "आपको कितनी quantity चाहिए?"
+
+    LanguageSettings:
+      primary_language: hi-IN
+      secondary_language: en-IN
+      allowed_english_words: ["EMI", "discount", "offer", "OK", "yes", "no"]
