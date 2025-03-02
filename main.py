@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from livekit.agents import AutoSubscribe, JobContext, WorkerOptions, cli, llm
 from livekit.agents.voice_assistant import VoiceAssistant
 from livekit.plugins import azure, silero, openai
-from api import AssistantFnc
 
 load_dotenv()
 
@@ -22,7 +21,7 @@ async def entrypoint(ctx: JobContext):
 
     # Create system prompt with sales script and language instructions
     system_prompt = (
-        "You are a male outbound sales voice assistant making calls to potential customers. "
+        "You are a female outbound sales voice assistant making calls to potential customers. "
         "Your primary language is Hindi (hi-IN) with English (en-IN) as a secondary language. "
         "You should primarily speak in Hindi but can use English for technical terms. "
         "Only use the English words that are specifically allowed in the language settings. "
@@ -37,7 +36,7 @@ async def entrypoint(ctx: JobContext):
         text=system_prompt,
     )
     await ctx.connect(auto_subscribe=AutoSubscribe.AUDIO_ONLY)
-    fnc_ctx = AssistantFnc()
+    #fnc_ctx = AssistantFnc()
 
     # Configure Azure STT with Hindi as the primary language.
     azure_stt = azure.STT(
@@ -59,12 +58,12 @@ async def entrypoint(ctx: JobContext):
 
     # Create the voice assistant using the configured plugins.
     assistant = VoiceAssistant(
-        vad=silero.VAD.load(min_speech_duration=0.5),
+        vad=silero.VAD.load(min_speech_duration=0.2),
         stt=azure_stt,
         llm=azure_llm,
         tts=azure_tts,
         chat_ctx=initial_ctx,
-        fnc_ctx=fnc_ctx,
+        #fnc_ctx=fnc_ctx,
     )
     assistant.start(ctx.room)
 

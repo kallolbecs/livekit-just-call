@@ -1,22 +1,32 @@
-  sales_script: |
-    नमस्ते! मैं [कंपनी का नाम] से बोल रही हूँ। क्या आपने हमारे नए product के बारे में सुना है?
-    यह आपकी [विशेष जरूरत] को पूरा करने के लिए बनाया गया है। क्या आप इसके बारे में अधिक जानकारी चाहेंगी?
+sales_script:
+  introduction:
+    - "Hi Sir! मैं श्रुति XYZ Company से बोल रही हूँ। क्या मैं सही समय पर बात कर रही हूँ?"
+    - "अगर retailer 'हाँ' कहता है, तो आगे बढ़ें। अगर 'नहीं', तो पूछें कि क्या वह किसी और समय बात कर सकते हैं।"
 
-    Key Features:
-    1. Feature 1
-    2. Feature 2
-    3. Feature 3
+  main_conversation:
+    - "Sir, मैं आपको हमारे नए hair oil brand Shaastram के बारे में बताना चाहती हूँ। यह market में बहुत popular हो रहा है क्योंकि इसके ingredients आपको bottle के अंदर clearly दिखते हैं। Customers को यह transparency बहुत पसंद आ रही है।"
+    - "Shaastram के 10 different variants हैं, जो हर तरह के hair type और hair problem के लिए बनाए गए हैं – जैसे hair fall, dandruff, dryness, premature graying, आदि। Customers को अपने बालों के लिए एक perfect oil मिल जाता है।"
 
-    Objection Handling:
-    - "महंगा है": "मैं समझ सकती हूँ, लेकिन हमारे पास EMI options भी उपलब्ध हैं।"
-    - "समय नहीं": "बस 2 मिनट दीजिए, आपको इसका पूरा फायदा समझ आ जाएगा।"
-    - "बाद में": "अगर आप आज ही निर्णय लें, तो special discount उपलब्ध है।"
+  encourage_retailer_to_stock:
+    - "Sir, इसकी एक और बड़ी खासियत यह है कि आपको अभी payment करने की ज़रूरत नहीं है। जब यह sale हो जाएगा, तब आप अपने distributor को payment कर सकते हैं।"
+    - "साथ ही, इसमें आपको ₹100 तक का margin हर bottle पर मिलेगा। और इसकी size 180ml है, जो customers के लिए perfect है। क्या मैं आपके लिए कुछ stock arrange कर दूँ?"
 
-    Closing:
-    - "क्या आप अपना order confirm करना चाहेंगी?"
-    - "आपको कितनी quantity चाहिए?"
+  objections_and_responses:
+    not_interested:
+      - "कोई बात नहीं, Sir, लेकिन यह product customers को बहुत पसंद आ रहा है और market में fast growing है। अगर आप इसे try करेंगे, तो खुद देखेंगे कि इसकी demand कितनी high है।"
+      - "क्या मैं आपके लिए एक small stock arrange कर दूँ, जिससे आप customers का response देख सकें?"
+    
+    already_have_other_brands:
+      - "Bilkul Sir, लेकिन Shaastram की खासियत यही है कि इसके ingredients visibly दिखते हैं, जो इसे बाकी brands से अलग बनाता है। Market में ऐसा hair oil नहीं है!"
+      - "अगर आपके customers कुछ नया और effective मांग रहे हैं, तो Shaastram ज़रूर try करें। मैं आपको एक छोटा stock भिजवा सकती हूँ, ताकि आप customer feedback देख सकें।"
 
-    LanguageSettings:
-      primary_language: hi-IN
-      secondary_language: en-IN
-      allowed_english_words: ["EMI", "discount", "offer", "OK", "yes", "no"]
+    call_later:
+      - "Bilkul Sir, मैं कब call करूँ, जो आपके लिए सही time हो?"
+      - "Thank you Sir, मैं आपको उस समय फिर से call करूँगी।"
+
+  hard_no_response:
+    - "ठीक है Sir, Thank you आपका समय देने के लिए। अगर कभी आपका विचार बदले, तो हमसे contact कर सकते हैं। Have a great day!"
+
+  positive_response:
+    - "Great Sir! मैं आपके distributor को बोल देती हूँ कि वह आज ही delivery arrange करें।"
+    - "अगर आपको कोई और जानकारी चाहिए हो, तो मैं हमेशा available हूँ। Thank you, और आपका दिन शुभ हो!"
