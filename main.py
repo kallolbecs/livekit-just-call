@@ -59,7 +59,7 @@ async def entrypoint(ctx: JobContext):
 
     # Create the voice assistant using the configured plugins.
     assistant = VoiceAssistant(
-        vad=silero.VAD.load(),
+        vad=silero.VAD.load(min_speech_duration=0.5),
         stt=azure_stt,
         llm=azure_llm,
         tts=azure_tts,
